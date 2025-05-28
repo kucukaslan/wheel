@@ -1,8 +1,8 @@
 package slices
 
 import (
+	"github.com/kucukaslan/wheel-go/logic"
 	"slices"
-	"wheel-go/logic"
 )
 
 // FilterSlice gives a new slice containing only the elements of the input slice
