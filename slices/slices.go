@@ -1,7 +1,7 @@
 package slices
 
 import (
-	"github.com/kucukaslan/wheel-go/logic"
+	"github.com/kucukaslan/wheel/logic"
 	"slices"
 )
 
