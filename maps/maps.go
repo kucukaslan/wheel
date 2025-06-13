@@ -63,3 +63,14 @@ func ToSlice[K comparable, V any](m map[K]V) []struct {
 	}
 	return slice
 }
+
+func SliceToPseudoSet[T comparable](slice []T) map[T]struct{} {
+	if slice == nil {
+		return nil
+	}
+	result := make(map[T]struct{}, len(slice))
+	for _, item := range slice {
+		result[item] = struct{}{}
+	}
+	return result
+}
