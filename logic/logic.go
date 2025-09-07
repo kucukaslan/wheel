@@ -29,12 +29,12 @@ func Not[T any](predicate func(T) bool) func(T) bool {
 }
 
 func Nor[T any](predicates ...func(T) bool) func(T) bool {
-	// De Morgan's Law: NOR is equivalent to NOT(OR)
+	// NOR is equivalent to NOT(OR)
 	return Not(Or(predicates...))
 }
 
 func Nand[T any](predicates ...func(T) bool) func(T) bool {
-	// De Morgan's Law: NAND is equivalent to NOT(AND)
+	// NAND is equivalent to NOT(AND)
 	// It is tragic that, originally, NAND was invented as a universal gate.
 	// Probably, the NOT and AND operations I use here are converted to NAND gates in hardware.
 	return Not(And(predicates...))
